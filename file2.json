@@ -1,0 +1,38 @@
+{ "anagrafica": [
+    {
+        "nome": "Marco",
+        "cognome": "Verdi",
+        "età": 18,
+        "indirizzo": "Via Mazzo 56",
+        "città": "Rho",
+        "telefono": "3769538657",
+        "telefoni": ["8459603845",
+                     "4758394754"]
+
+
+    },
+    {
+        "nome": "Andrea",
+        "cognome": "Mazzini",
+        "età": 65,
+        "indirizzo": "Via Po 8",
+        "città": "Milano",
+        "telefono": "4367594030",
+        "telefoni": ["3859274428",
+                     "1039449500"]
+
+
+    },
+    {
+        "nome": "Stefano",
+        "cognome": "Grandi",
+        "età": 33,
+        "indirizzo": "Via Italia 66",
+        "città": "Matera",
+        "telefono": "6734758940",
+        "telefoni": ["6667775548",
+                     "4323467899"]
+
+
+    }
+]}
