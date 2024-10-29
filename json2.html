@@ -43,7 +43,7 @@ function carica(){
             const dati=JSON.parse(x.responseText);
             const tabella=document.getElementById("Anagrafica");
             for(i=0;i<dati.length;i++){
-                const persona=dati[i];
+                const persona=dati.anagrafica[i];
                 const riga=document.createElement("tr");
                 
                     const cellaNome = document.createElement("td");
