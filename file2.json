@@ -5,7 +5,6 @@
         "eta": 18,
         "indirizzo": "Via Mazzo 56",
         "citta": "Rho",
-        "telefono": "3769538657",
         "telefoni": ["8459603845",
                      "4758394754"]
 
@@ -17,7 +16,6 @@
         "eta": 65,
         "indirizzo": "Via Po 8",
         "citta": "Milano",
-        "telefono": "4367594030",
         "telefoni": ["3859274428",
                      "1039449500"]
 
@@ -29,7 +27,6 @@
         "eta": 33,
         "indirizzo": "Via Italia 66",
         "citta": "Matera",
-        "telefono": "6734758940",
         "telefoni": ["6667775548",
                      "4323467899"]
 
