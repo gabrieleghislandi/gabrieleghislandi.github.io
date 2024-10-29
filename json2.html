@@ -8,10 +8,11 @@
 
 table{
     width:100%;
-    text-align: center;
+    text-align:center;
 }
 
-th{
+
+tr{
     background-color: blue;
     color:white;
 }
@@ -37,7 +38,7 @@ th{
 
 function carica(){
     const x=new XMLHttpRequest();
-    x.open("GET", 'file2.json', true);
+    x.open("GET", 'file.json', true);
     x.onload=function(){
         if(x.status==200){
             const dati=JSON.parse(x.responseText);
