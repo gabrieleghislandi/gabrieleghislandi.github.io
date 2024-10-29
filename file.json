@@ -2,9 +2,9 @@
     {
         "nome": "Marco",
         "cognome": "Verdi",
-        "età": 18,
+        "eta": 18,
         "indirizzo": "Via Mazzo 56",
-        "città": "Rho",
+        "citta": "Rho",
         "telefono": "3769538657"
 
 
@@ -12,9 +12,9 @@
     {
         "nome": "Andrea",
         "cognome": "Mazzini",
-        "età": 65,
+        "eta": 65,
         "indirizzo": "Via Po 8",
-        "città": "Milano",
+        "citta": "Milano",
         "telefono": "4367594030"
 
 
@@ -22,9 +22,9 @@
     {
         "nome": "Stefano",
         "cognome": "Grandi",
-        "età": 33,
+        "eta": 33,
         "indirizzo": "Via Italia 66",
-        "città": "Matera",
+        "citta": "Matera",
         "telefono": "6734758940"
 
 
