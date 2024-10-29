@@ -41,7 +41,7 @@ function carica(){
         if(x.status==200){
             const dati=JSON.parse(x.responseText);
             const tabella=document.getElementById("Anagrafica");
-            for(i=0;i<dati.anagrafica.length;i++){
+            for(let i=0;i<dati.anagrafica.length;i++){
                 const persona=dati.anagrafica[i];
                 const riga=document.createElement("tr");
                 
