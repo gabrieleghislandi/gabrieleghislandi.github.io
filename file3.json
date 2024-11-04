@@ -19,7 +19,9 @@
         "indirizzo": "Via Po 8",
         "citta": "Milano",
         "telefoni": ["3859274428",
-                     "1039449500"]
+                     "1039449500"],
+      "immagine": "venom.jpg",
+      "cv": "cv.html"
 
 
     },
@@ -30,7 +32,9 @@
         "indirizzo": "Via Italia 66",
         "citta": "Matera",
         "telefoni": ["6667775548",
-                     "4323467899"]
+                     "4323467899"],
+      "immagine": "joker.jpg",
+      "cv": "cv.html"
 
 
     }
