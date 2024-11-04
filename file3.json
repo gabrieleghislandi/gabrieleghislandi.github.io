@@ -1,1 +1,37 @@
+{ "anagrafica": [
+    {
+        "nome": "Marco",
+        "cognome": "Verdi",
+        "eta": 18,
+        "indirizzo": "Via Mazzo 56",
+        "citta": "Rho",
+        "telefoni": ["8459603845",
+                     "4758394754"],
+      "immagine": "spiderman.jpg",
+      "cv": "spiderman_cv.json"
 
+
+    },
+    {
+        "nome": "Andrea",
+        "cognome": "Mazzini",
+        "eta": 65,
+        "indirizzo": "Via Po 8",
+        "citta": "Milano",
+        "telefoni": ["3859274428",
+                     "1039449500"]
+
+
+    },
+    {
+        "nome": "Stefano",
+        "cognome": "Grandi",
+        "eta": 33,
+        "indirizzo": "Via Italia 66",
+        "citta": "Matera",
+        "telefoni": ["6667775548",
+                     "4323467899"]
+
+
+    }
+]}
