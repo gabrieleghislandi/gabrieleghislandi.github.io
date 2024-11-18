@@ -1,0 +1,12 @@
+{
+    "nome": "Marco Verdi",
+    "esperienze": [
+        {
+            "ruolo": "Studente",
+            "azienda": "Liceo Scientifico",
+            "anni": "2018-2023"
+        }
+    ],
+    "competenze": ["JavaScript", "HTML", "CSS"],
+    "lingue": ["Italiano", "Inglese"]
+}
