@@ -46,7 +46,7 @@ img {
 
 function carica(){
     const x=new XMLHttpRequest();
-    x.open("GET", 'file.json', true);
+    x.open("GET", 'file3.json', true);
     x.onload=function(){
         if(x.status==200){
             const dati=JSON.parse(x.responseText);
