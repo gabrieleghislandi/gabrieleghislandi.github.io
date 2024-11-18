@@ -16,6 +16,14 @@ tr{
     background-color: blue;
     color:white;
 }
+
+img {
+     width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    
     </style>
 <body>
 <center>
@@ -28,6 +36,7 @@ tr{
         <th>INDIRIZZO</th>
         <th>CITTA</th>
         <th>TELEFONO</th>
+        <th>IMMAGINE</th>
     </tr>
 </table>
 
@@ -70,6 +79,16 @@ function carica(){
                     const cellaTelefono = document.createElement("td");
                     cellaTelefono.textContent = persona.telefono;
                     riga.appendChild(cellaTelefono);
+
+                const cellaImmagine = document.createElement("td");
+                const immagine = document.createElement("img");
+                immagine.src = 'joker.jpg'; // URL dell'immagine
+                immagine.alt = `Immagine di ${persona.nome}`;
+                immagine.onclick = () => {
+                    window.open(persona.cv, "_blank"); // Apri il CV in una nuova scheda
+                };
+                cellaImmagine.appendChild(immagine);
+                riga.appendChild(cellaImmagine);
                     
                     tabella.appendChild(riga);
                   
