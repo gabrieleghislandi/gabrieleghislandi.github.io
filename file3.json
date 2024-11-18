@@ -7,7 +7,7 @@
             "indirizzo": "Via Mazzo 56",
             "citta": "Rho",
             "telefono": "3769538657",
-            "immagine": "joker.jpg",
+            "immagine": 'joker.jpg',
             "cv": "persona1.json"
         },
         {
@@ -17,7 +17,7 @@
             "indirizzo": "Via Po 8",
             "citta": "Milano",
             "telefono": "4367594030",
-            "immagine": "venom.jpg",
+            "immagine": 'venom.jpg',
             "cv": "persona2.json"
         },
         {
@@ -27,7 +27,7 @@
             "indirizzo": "Via Italia 66",
             "citta": "Matera",
             "telefono": "6734758940",
-            "immagine": "spiderman.jpg",
+            "immagine": 'spiderman.jpg',
             "cv": "persona3.json"
         }
     ]
