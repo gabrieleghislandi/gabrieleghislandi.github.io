@@ -83,7 +83,7 @@ function carica(){
                 const cellaImmagine = document.createElement("td");
                 const immagine = document.createElement("img");
                 immagine.src = persona.immagine; 
-                 immagine.onclick = window.open(persona.cv);
+                 immagine.onclick = function() {window.open(persona.cv);};
                 cellaImmagine.appendChild(immagine);
                 riga.appendChild(cellaImmagine);
                     
