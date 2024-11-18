@@ -82,10 +82,7 @@ function carica(){
 
                 const cellaImmagine = document.createElement("td");
                 const immagine = document.createElement("img");
-                immagine.src = 'joker.jpg'; // URL dell'immagine
-                immagine.alt = `Immagine di ${persona.nome}`;
-                immagine.onclick = () => {
-                    window.open(persona.cv, "_blank"); // Apri il CV in una nuova scheda
+                immagine.src = 'joker.jpg'; 
                 };
                 cellaImmagine.appendChild(immagine);
                 riga.appendChild(cellaImmagine);
