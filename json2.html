@@ -67,15 +67,14 @@ function carica(){
                     cellaCitta.textContent = persona.citta;
                     riga.appendChild(cellaCitta);
 
-                const cellaTelefoni = document.createElement("td"); 
-                        
+                const cellaTelefoni = document.createElement("td");  
                     const lista = document.createElement("ul");
                     for (let j = 0; j < persona.telefoni.length; j++) {
                         const li = document.createElement("li");
                         li.textContent = persona.telefoni[j]; 
-                        ul.appendChild(li);
+                        lista.appendChild(li);
                         }
-                    cellaTelefoni.appendChild(ul); 
+                    cellaTelefoni.appendChild(lista); 
                     riga.appendChild(cellaTelefoni); 
 
 
