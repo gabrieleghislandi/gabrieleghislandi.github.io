@@ -82,8 +82,10 @@ function carica(){
 
                 const cellaImmagine = document.createElement("td");
                 const immagine = document.createElement("img");
-                immagine.src = 'joker.jpg'; 
-                };
+                immagine.src = persona.immagine; 
+                 immagine.onclick = () => {
+                            window.open(persona.cv, "_blank"); // Apre il file JSON del CV in una nuova scheda
+                        };
                 cellaImmagine.appendChild(immagine);
                 riga.appendChild(cellaImmagine);
                     
