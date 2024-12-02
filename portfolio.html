@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio</h1>
+    <table id="portfolioTable">
+        <tr>
+            <th>Titolo</th>
+            <th>Descrizione</th>
+            <th>Link</th>
+        </tr>
+    </table>
+
+    <script>
+        
+        function caricaPortfolio() {
+            const x = new XMLHttpRequest();
+            x.open("GET", "portfolio.xml", true);
+            x.onreadystatechange = function () {
+                if (this.status === 200) {
+                    const xml = this.responseXML;
+                    const lavori = xml.getElementsByTagName("lavoro");
+                    const table = document.getElementById("portfolioTable");
+
+                    for (let lavoro of lavori) {
+                        const titolo = lavoro.getElementsByTagName("titolo")[0].textContent;
+                        const descrizione = lavoro.getElementsByTagName("descrizione")[0].textContent;
+                        const link = lavoro.getElementsByTagName("link")[0].textContent;
+
+                        const row = table.insertRow();
+                        row.innerHTML = `
+                            <td>${titolo}</td>
+                            <td>${descrizione}</td>
+                            <td><a href="${link}">Vai</a></td>
+                        `;
+                    }
+                }
+            };
+            x.send();
+        }
+        caricaPortfolio();
+    </script>
+</body>
+</html>
