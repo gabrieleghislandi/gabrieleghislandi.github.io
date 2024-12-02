@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>CV JSON</title>
+</head>
+<style> 
+
+    
+    </style>
+<body>
+<center>
 <h1>cv</h1>
+<div id="cv-container"></div>
+    
+
+</center>
+
+<script>
+
+
+function carica(){
+    const x=new XMLHttpRequest();
+    x.open("GET", 'persona1.json', true);
+    x.onload=function(){
+        if(x.status==200){
+            const dati=JSON.parse(x.responseText);
+            for(let i=0;i<dati.anagrafica.length;i++){
+              mostraCV(data);
+            }
+        };
+        x.send();
+      
+function mostraCV(data) {
+            const container = document.getElementById('cv-container');
+
+            const nomeCognome = `<h2>${data.nome} ${data.cognome}</h2>`;
+            const profilo = `
+                <div class="section">
+                    <h3>Profilo Professionale</h3>
+                    <p>${data["profilo professionale"]}</p>
+                </div>
+            `;
+            const contatti = `
+                <div class="section">
+                    <h3>Contatti</h3>
+                    <p>Età: ${data.eta}</p>
+                    <p>Indirizzo: ${data.indirizzo}</p>
+                    <p>Telefono: ${data.telefono}</p>
+                    <p>Email: ${data.email}</p>
+                </div>
+            `;
+            const competenze = `
+                <div class="section">
+                    <h3>Capacità e Competenze</h3>
+                    <p>${data["capacità e competenze"]}</p>
+                </div>
+            `;
+            const esperienze = `
+                <div class="section">
+                    <h3>Esperienze Lavorative</h3>
+                    <ul>
+                        ${data["esperienze lavorative"].map(exp => `
+                            <li>
+                                Azienda: ${exp.azienda}<br>
+                                Ruolo: ${exp.ruolo}<br>
+                                Durata: ${exp.durata}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            const istruzione = `
+                <div class="section">
+                    <h3>Istruzione</h3>
+                    <p>${data.istruzione}</p>
+                </div>
+            `;
+
+            container.innerHTML = nomeCognome + profilo + contatti + competenze + esperienze + istruzione;
+        }
+
+        window.onload = carica();
+</script>
+</body>
+</html>
