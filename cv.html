@@ -60,13 +60,13 @@ function mostraCV(data) {
         <div class="section">
             <h3>Esperienze Lavorative</h3>
             <ul>
-                ${data["esperienze lavorative"].map(exp => `
+                ${data["esperienze lavorative"].map(e => `
                     <li>
-                        Azienda: ${exp.azienda}<br>
-                        Ruolo: ${exp.ruolo}<br>
-                        Durata: ${exp.durata}
+                        Azienda: ${e.azienda}<br>
+                        Ruolo: ${e.ruolo}<br>
+                        Durata: ${e.durata}
                     </li>
-                `).join('')}
+                `)}
             </ul>
         </div>
     `;
