@@ -9,26 +9,6 @@
             "telefono": "3769538657",
             "immagine": "joker.jpg",
             "cv": "persona1.json"
-        },
-        {
-            "nome": "Andrea",
-            "cognome": "Mazzini",
-            "eta": 65,
-            "indirizzo": "Via Po 8",
-            "citta": "Milano",
-            "telefono": "4367594030",
-            "immagine": "venom.jpg",
-            "cv": "persona2.json"
-        },
-        {
-            "nome": "Stefano",
-            "cognome": "Grandi",
-            "eta": 33,
-            "indirizzo": "Via Italia 66",
-            "citta": "Matera",
-            "telefono": "6734758940",
-            "immagine": "spiderman.jpg",
-            "cv": "persona3.json"
         }
     ]
 }
