@@ -1,1 +1,20 @@
-<h1>CV</h1>
+{
+    "nome": "Marco",
+    "cognome": "Verdi",
+    "eta": 30,
+    "indirizzo": "Via Mazzo 56, Rho",
+    "telefono": "3769538657",
+    "email": "marco.verdi@gmail.com",
+   "profilo professionale": "sono un lavoratore intraprendendente che non si arrende alla prima difficoltà, dal momento in cui inizio un lavoro cerco di portarlo a termine nel migliore dei modi; preferisco lavorare da solo piuttosto che in un team; sono desideroso di crescere in ambito lavorativo e di apprendere nuove conoscenze.",
+   "capacità e competenze": "determinazione, capacità di adattamento, capacità comunicative, HTML, CSS", 
+  "esperienze lavorative": [ {"azienda": "IBM ITALIA SPA",
+                             "ruolo": "sviluppatore web",
+                             "durata": "3 anni"},
+                            {"azienda": "TECH DATA ITALIA SRL",
+                             "ruolo": "programmatore",
+                             "durata": "4 anni"}],
+  "istruzione": "laurea in informatica, università degli studi di milano"
+}
+    
+    
+                             
