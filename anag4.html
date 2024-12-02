@@ -1,1 +1,117 @@
-<h1>anag4</h1>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabella JSON</title>
+</head>
+<style> 
+
+table{
+    width:100%;
+    text-align:center;
+}
+
+
+tr{
+    background-color: blue;
+    color:white;
+}
+
+img {
+     width: 100px;
+    height: 100px;
+    cursor: pointer;
+    }
+
+.iconaportfolio{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    
+    </style>
+<body>
+<center>
+<h1>TABELLA JSON</h1>
+<table id="Anagrafica">
+    <tr>
+        <th>NOME</th>
+        <th>COGNOME</th>
+        <th>ETA</th>
+        <th>INDIRIZZO</th>
+        <th>CITTA</th>
+        <th>TELEFONO</th>
+        <th>IMMAGINE</th>
+        <th>PORTFOLIO</th>
+    </tr>
+</table>
+
+</center>
+
+<script>
+
+
+function carica(){
+    const x=new XMLHttpRequest();
+    x.open("GET", 'file3.json', true);
+    x.onload=function(){
+        if(x.status==200){
+            const dati=JSON.parse(x.responseText);
+            const tabella=document.getElementById("Anagrafica");
+            for(let i=0;i<dati.anagrafica.length;i++){
+                const persona=dati.anagrafica[i];
+                const riga=document.createElement("tr");
+                
+                    const cellaNome = document.createElement("td");
+                    cellaNome.textContent = persona.nome;
+                    riga.appendChild(cellaNome);
+
+                    const cellaCognome = document.createElement("td");
+                    cellaCognome.textContent = persona.cognome;
+                    riga.appendChild(cellaCognome);
+
+                    const cellaEta = document.createElement("td");
+                    cellaEta.textContent = persona.eta;
+                    riga.appendChild(cellaEta);
+
+                    const cellaIndirizzo = document.createElement("td");
+                    cellaIndirizzo.textContent = persona.indirizzo;
+                    riga.appendChild(cellaIndirizzo);
+
+                    const cellaCitta = document.createElement("td");
+                    cellaCitta.textContent = persona.citta;
+                    riga.appendChild(cellaCitta);
+
+                    const cellaTelefono = document.createElement("td");
+                    cellaTelefono.textContent = persona.telefono;
+                    riga.appendChild(cellaTelefono);
+
+                const cellaImmagine = document.createElement("td");
+                const immagine = document.createElement("img");
+                immagine.src = persona.immagine; 
+                immagine.style.cursor = "pointer";
+                 immagine.onclick = function() {window.open('cv.html');};
+                cellaImmagine.appendChild(immagine);
+                riga.appendChild(cellaImmagine);
+
+              const cellaPortfolio = document.createElement("td");
+                const portfolioIcona = document.createElement("img");
+                portfolioIcona.src = 'portfolio.jpg'; 
+                portfolioIcona.classList.add("iconaportfolio");
+                portfolioIcona.onclick = function() {
+                    window.open(persona.portfolio, "_blank");
+                };
+                cellaPortfolio.appendChild(portfolioIcona);
+                riga.appendChild(cellaPortfolio);
+                    
+                    tabella.appendChild(riga);
+                  
+            }
+        }
+    }
+x.send();
+}
+carica();
+</script>
+</body>
+</html>
