@@ -1,0 +1,19 @@
+<portfolio>
+  
+    <lavoro>
+        <titolo>Anagrafica 1</titolo>
+        <descrizione>versione 1.0</descrizione>
+        <link>https://gabrieleghislandi.github.io/json.html</link>
+    </lavoro>
+    <lavoro>
+        <titolo>Anagrafica 2</titolo>
+        <descrizione>versione 2.0</descrizione>
+        <link>https://gabrieleghislandi.github.io/json2.html</link>
+    </lavoro>
+   <lavoro>
+        <titolo>Anagrafica 3</titolo>
+        <descrizione>versione 3.0</descrizione>
+        <link>https://gabrieleghislandi.github.io/json3.html</link>
+    </lavoro>
+   
+</portfolio>
