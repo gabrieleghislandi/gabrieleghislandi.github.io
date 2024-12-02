@@ -25,8 +25,7 @@ function carica(){
     x.onload=function(){
         if(x.status==200){
             const dati=JSON.parse(x.responseText);
-            for(let i=0;i<dati.anagrafica.length;i++){
-              mostraCV(data);
+              mostraCV(dati);
             }
         };
         x.send();
@@ -80,7 +79,7 @@ function mostraCV(data) {
             container.innerHTML = nomeCognome + profilo + contatti + competenze + esperienze + istruzione;
         }
 
-        window.onload = carica();
+        window.onload = carica;
 </script>
 </body>
 </html>
