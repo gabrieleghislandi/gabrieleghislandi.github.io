@@ -58,11 +58,11 @@
                         const descrizione = lavoro.getElementsByTagName("descrizione")[0].textContent;
                         const link = lavoro.getElementsByTagName("link")[0].textContent;
 
-                        const row = table.insertRow();
-                        row.innerHTML = `
+                        const riga = table.insertRow();
+                        riga.innerHTML = `
                             <td>${titolo}</td>
                             <td>${descrizione}</td>
-                            <td><a href="${link}">Vai</a></td>
+                            <td><a href="${link}">APRI</a></td>
                         `;
                     }
                 }
