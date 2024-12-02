@@ -1,0 +1,15 @@
+{
+    "anagrafica": [
+        {
+            "nome": "Marco",
+            "cognome": "Verdi",
+            "eta": 30,
+            "indirizzo": "Via Mazzo 56",
+            "citta": "Rho",
+            "telefono": "3769538657",
+            "immagine": "joker.jpg",
+            "cv": "persona1.json",
+            "portfolio": "portfolio.xml"
+        }
+    ]
+}
