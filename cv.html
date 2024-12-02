@@ -57,19 +57,25 @@ function mostraCV(data) {
         </div>
     `;
     const esperienze = `
-        <div class="section">
-            <h3>Esperienze Lavorative</h3>
-            <ul>
-                ${data["esperienze lavorative"].map(exp => `
-                    <li>
-                        Azienda: ${exp.azienda}<br>
-                        Ruolo: ${exp.ruolo}<br>
-                        Durata: ${exp.durata}
-                    </li>
-                `).join('')}
-            </ul>
-        </div>
+    <div class="section">
+        <h3>Esperienze Lavorative</h3>
+        <ul>
+            `;
+
+for (let i = 0; i < data["esperienze lavorative"].length; i++) {
+    const e = data["esperienze lavorative"][i];
+    esperienze += `
+        <li>
+            Azienda: ${exp.azienda}<br>
+            Ruolo: ${exp.ruolo}<br>
+            Durata: ${exp.durata}
+        </li>
     `;
+}
+esperienze += `
+        </ul>
+    </div>
+`;
     const istruzione = `
         <div class="section">
             <h3>Istruzione</h3>
