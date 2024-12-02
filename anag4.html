@@ -98,8 +98,7 @@ function carica(){
                 const portfolioIcona = document.createElement("img");
                 portfolioIcona.src = 'portfolio.jpg'; 
                 portfolioIcona.classList.add("iconaportfolio");
-                portfolioIcona.onclick = function() {
-                    window.open(persona.portfolio);
+                portfolioIcona.onclick = function() {window.open('portfolio.html');
                 };
                 cellaPortfolio.appendChild(portfolioIcona);
                 riga.appendChild(cellaPortfolio);
