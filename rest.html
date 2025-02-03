@@ -2,30 +2,43 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Elenco dei Post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimi Articoli</title>
 </head>
 <body>
-    <h1>Elenco dei Post</h1>
+    <h1>Ultimi Articoli da TechCrunch</h1>
     <ul id="post-list"></ul>
 
     <script>
-        const apiUrl = 'https://www.repubblica.it/wp-json/wp/v2/posts';
+        const apiUrl = 'https://techcrunch.com/wp-json/wp/v2/posts?per_page=5';
 
         async function fetchPosts() {
             try {
                 const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`Errore HTTP: ${response.status}`);
+                
                 const posts = await response.json();
+                console.log(posts); 
+
                 const postList = document.getElementById('post-list');
+                postList.innerHTML = ""; 
 
                 posts.forEach(post => {
                     const listItem = document.createElement('li');
-                    listItem.innerHTML = `<a href="${post.link}">${post.title.rendered}</a>`;
+                    listItem.innerHTML = `<a href="${post.link}" target="_blank">${post.title.rendered}</a>`;
                     postList.appendChild(listItem);
                 });
             } catch (error) {
                 console.error('Errore nel recupero dei post:', error);
+                document.getElementById('post-list').innerHTML = `<li>Errore nel caricamento dei post</li>`;
             }
         }
+
+        fetchPosts();
+    </script>
+</body>
+</html>
+
 
         fetchPosts();
     </script>
