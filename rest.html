@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Elenco dei Post</title>
+</head>
+<body>
+    <h1>Elenco dei Post</h1>
+    <ul id="post-list"></ul>
+
+    <script>
+        const apiUrl = 'https://www.repubblica.it/wp-json/wp/v2/posts';
+
+        async function fetchPosts() {
+            try {
+                const response = await fetch(apiUrl);
+                const posts = await response.json();
+                const postList = document.getElementById('post-list');
+
+                posts.forEach(post => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="${post.link}">${post.title.rendered}</a>`;
+                    postList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Errore nel recupero dei post:', error);
+            }
+        }
+
+        fetchPosts();
+    </script>
+</body>
+</html>
