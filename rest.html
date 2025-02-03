@@ -18,16 +18,15 @@
                 if (!response.ok) throw new Error(`Errore HTTP: ${response.status}`);
                 
                 const posts = await response.json();
-                console.log(posts); 
-
                 const postList = document.getElementById('post-list');
-                postList.innerHTML = ""; 
+                postList.innerHTML = "";
 
-                posts.forEach(post => {
+                for (let i = 0; i < posts.length; i++) {
+                    const post = posts[i];
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `<a href="${post.link}" target="_blank">${post.title.rendered}</a>`;
                     postList.appendChild(listItem);
-                });
+                }
             } catch (error) {
                 console.error('Errore nel recupero dei post:', error);
                 document.getElementById('post-list').innerHTML = `<li>Errore nel caricamento dei post</li>`;
@@ -38,6 +37,5 @@
     </script>
 </body>
 </html>
-
 
     
